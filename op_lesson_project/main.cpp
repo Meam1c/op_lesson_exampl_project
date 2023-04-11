@@ -31,6 +31,17 @@ public:
 		age = 15;
 		avg_mark = 4;
 	}
+
+	// copy constructor
+	Student( const Student &student) {
+		
+		name = student.name;
+		surname = student.surname;
+		age = student.age;
+		avg_mark = student.avg_mark;
+
+	}
+
 	~Student() {
 		cout << "distructor" << endl;
 	}
@@ -56,12 +67,16 @@ public:
 
 int main() {
 	Student st1; //defaul constructor
-	cout << st1.convert() << endl;
-	Student st2("Ivan", "Ivanov", 14, 10);  //defaul constructor with arguments
+	//cout << st1.convert() << endl;
+	Student st2("Ivan", "Ivanov", 14, 10);         //defaul constructor with arguments
 	cout << st2.convert() << endl;
-	Student st3("Ivan", "Ivanov");
-	cout << st3.convert() << endl;
+	/*Student st3("Dima", "Ivanov");
+	cout << st3.convert() << endl;*/
+	Student st4 = st2;                             //copy constructor
+	Student st5(st2);                              //copy constructor
 	
-
+	
+	cout << st4.convert() << endl;
+	cout << st5.convert() << endl;
 	return 0;
 }
