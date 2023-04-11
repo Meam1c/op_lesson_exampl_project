@@ -7,6 +7,13 @@ public:
 	int age;
 	float avg_mark;
 
+	Student() {
+		name = "no name";
+		surname = "no surname";
+		age = 15;
+		avg_mark = 4;
+	}
+
 	void clear() {
 		name = "no name";
 		surname = "no surname";
@@ -28,20 +35,21 @@ public:
 
 int main() {
 	Student st1;
-	st1.name="ivan";
+	cout << st1.convert() << endl;
+	/*st1.name="ivan";
 	st1.surname="ivanov";
 	st1.age = 14;
 	st1.avg_mark = 10;
+	
 
-	Student st2 = st1;
-
+	
 	cout << "Defore:" << endl;
 	cout << st1.convert() << endl;
 
 	st1.clear();
 
 	cout << "\nAfter:" << endl;
-	cout << st1.convert() << endl;
+	cout << st1.convert() << endl;*/
 
 	return 0;
 }
