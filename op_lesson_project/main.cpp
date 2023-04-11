@@ -24,6 +24,13 @@ public:
 		age = a;
 		avg_mark = mark;
 	}
+	Student(string nm, string surnm) {
+		cout << "default constructor with arguments" << endl;
+		name = nm;
+		surname = surnm;
+		age = 15;
+		avg_mark = 4;
+	}
 
 	void clear() {
 		name = "no name";
@@ -46,23 +53,12 @@ public:
 
 int main() {
 	Student st1; //defaul constructor
-	Student st2("Ivan","Ivanov",14,10);  //defaul constructor with arguments
 	cout << st1.convert() << endl;
+	Student st2("Ivan", "Ivanov", 14, 10);  //defaul constructor with arguments
 	cout << st2.convert() << endl;
-	/*st1.name="ivan";
-	st1.surname="ivanov";
-	st1.age = 14;
-	st1.avg_mark = 10;
+	Student st3("Ivan", "Ivanov");
+	cout << st3.convert() << endl;
 	
-
-	
-	cout << "Defore:" << endl;
-	cout << st1.convert() << endl;
-
-	st1.clear();
-
-	cout << "\nAfter:" << endl;
-	cout << st1.convert() << endl;*/
 
 	return 0;
 }
