@@ -31,6 +31,9 @@ public:
 		age = 15;
 		avg_mark = 4;
 	}
+	~Student() {
+		cout << "distructor" << endl;
+	}
 
 	void clear() {
 		name = "no name";
