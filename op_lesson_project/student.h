@@ -28,9 +28,9 @@ public:
 	void setSurname(string n);
 
 	int getAge();
-	int setAge(int a);
+	void setAge(int a);
 	float getAvgMark();
-	int setAvgMark(int mark);
+	void setAvgMark(float mark);
 
 	void clear();
 

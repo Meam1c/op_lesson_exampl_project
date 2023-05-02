@@ -2,7 +2,7 @@
 
 //default constructor
 Student::Student() {
-	cout << "default constructor " << endl;
+	//cout << "default constructor " << endl;
 	name = "no name";
 	surname = "no surname";
 	age = 15;
@@ -11,14 +11,14 @@ Student::Student() {
 
 //default constructor with arguments
 Student::Student(string nm, string surnm, int a, float mark) {
-	cout << "default constructor with arguments" << endl;
+	//cout << "default constructor with arguments" << endl;
 	name = nm;
 	surname = surnm;
 	age = a;
 	avg_mark = mark;
 }
 Student::Student(string nm, string surnm) {
-	cout << "default constructor with arguments" << endl;
+	//cout << "default constructor with arguments" << endl;
 	name = nm;
 	surname = surnm;
 	age = 15;
@@ -36,7 +36,7 @@ Student::Student(const Student& student) {
 }
 
 Student::~Student() {
-	cout << "distructor" << endl;
+	//cout << "distructor" << endl;
 }
 
 string Student::getName() {
@@ -55,7 +55,7 @@ void Student::setSurname(string n) {
 int Student::getAge() {
 	return age;
 }
-int Student::setAge(int a) {
+void Student::setAge(int a) {
 	if (a > 0 && a < 120) {
 		age = a;
 	}
@@ -63,7 +63,7 @@ int Student::setAge(int a) {
 float Student::getAvgMark() {
 	return avg_mark;
 }
-int Student::setAvgMark(int mark) {
+void Student::setAvgMark(float mark) {
 	if (mark > 0 && mark <= 10) {
 		avg_mark = mark;
 	}

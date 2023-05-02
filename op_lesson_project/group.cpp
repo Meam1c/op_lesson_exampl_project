@@ -16,9 +16,9 @@ Group::Group(string nm) {
 	name = nm;
 }
 Group::~Group() {
-	if (list != NULL) {
+	/*if (list != NULL) {
 		delete[] list;
-	}
+	}*/
 }
 
 void Group::add(Student student) {
