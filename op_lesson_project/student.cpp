@@ -1,7 +1,14 @@
 #include"student.h"
 
+int Student::count = 0;
+
+int Student::getCount() {
+	return count;
+}
+
 //default constructor
 Student::Student() {
+	count++;
 	//cout << "default constructor " << endl;
 	name = "no name";
 	surname = "no surname";
@@ -12,6 +19,7 @@ Student::Student() {
 //default constructor with arguments
 Student::Student(string nm, string surnm, int a, float mark) {
 	//cout << "default constructor with arguments" << endl;
+	count++;
 	name = nm;
 	surname = surnm;
 	age = a;
@@ -19,6 +27,7 @@ Student::Student(string nm, string surnm, int a, float mark) {
 }
 Student::Student(string nm, string surnm) {
 	//cout << "default constructor with arguments" << endl;
+	count++;
 	name = nm;
 	surname = surnm;
 	age = 15;
@@ -27,7 +36,7 @@ Student::Student(string nm, string surnm) {
 
 // copy constructor
 Student::Student(const Student& student) {
-
+	count++;
 	name = student.name;
 	surname = student.surname;
 	age = student.age;
@@ -36,6 +45,7 @@ Student::Student(const Student& student) {
 }
 
 Student::~Student() {
+	count--;
 	//cout << "distructor" << endl;
 }
 
