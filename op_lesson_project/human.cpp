@@ -4,7 +4,7 @@
 
 //default constructor
 Human::Human() {
-	
+	cout << " Human defaul constructor " << endl;
 	//cout << "default constructor " << endl;
 	name = "no name";
 	surname = "no surname";
@@ -25,7 +25,7 @@ Human::Human(string nm, string surnm, int a) {
 
 
 Human::~Human() {
-	
+	cout << " Human destructor " << endl;
 	//cout << "distructor" << endl;
 }
 

@@ -7,27 +7,20 @@ int Student::getCount() {
 }
 
 //default constructor
-Student::Student() {
+Student::Student() : Human() {
+	cout << " Student defaul constructor " << endl;
 	count++;
-	//cout << "default constructor " << endl;
-	setName("no name");
-	setSurname("no surname");
-	setAge(15);
 	avg_mark = 4;
 }
 
 //default constructor with arguments
-Student::Student(string nm, string surnm, int a, float mark) {
-	//cout << "default constructor with arguments" << endl;
+Student::Student(string nm, string surnm, int a, float mark):Human(nm, surnm,a) {
 	count++;
-	setName(nm);
-	setSurname(surnm);
-	setAge(a);
 	avg_mark = mark;
 }
 
 Student::~Student() {
-	
+	cout << " Student  destructor " << endl;
 }
 
 float Student::getAvgMark() {
