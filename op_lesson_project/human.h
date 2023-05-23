@@ -4,10 +4,12 @@ class Human
 {
 	private:
 
+		
+	public:
 		string name;
 		string surname;
 		int age;
-	public:
+
 		//default constructor
 		Human();
 

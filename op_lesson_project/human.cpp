@@ -12,12 +12,12 @@ Human::Human() {
 }
 
 //default constructor with arguments
-Human::Human(string nm, string surnm, int a) {
+Human::Human(string name, string surnmame, int age) {
 	//cout << "default constructor with arguments" << endl;
 
-	name = nm;
-	surname = surnm;
-	age = a;
+	this->name = name;
+	this->surname = surname;
+	this->age = age;
 	
 }
 
@@ -32,22 +32,22 @@ Human::~Human() {
 string Human::getName() {
 	return name;
 }
-void Human::setName(string n) {
-	name = n;
+void Human::setName(string name) {
+	this->name = name;
 }
 string Human::getSurname() {
-	return name;
+	return surname;
 }
-void Human::setSurname(string n) {
-	name = n;
+void Human::setSurname(string surname) {
+	this->surname = surname;
 }
 
 int Human::getAge() {
 	return age;
 }
-void Human::setAge(int a) {
-	if (a > 0 && a < 120) {
-		age = a;
+void Human::setAge(int age) {
+	if (age > 0 && age < 120) {
+		this->age = age;
 	}
 }
 
